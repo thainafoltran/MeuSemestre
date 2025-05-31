@@ -7,9 +7,10 @@
     android:layout_height="match_parent"
     android:backgroundTintMode="add"
     android:visibility="visible"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <com.google.android.material.chip.ChipGroup
+        android:id="@+id/chipGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="73dp"
@@ -17,21 +18,39 @@
 
     </com.google.android.material.chip.ChipGroup>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        android:background="@drawable/btn_inic_c_bot_top"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="251dp" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_cad_volt"
+        android:layout_width="119dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_cad_botao_out"
+        android:paddingBottom="25dp"
+        android:text="voltar"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/img_fin_b_fund_preto"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="371dp" />
+        android:id="@+id/imageView2"
+        android:layout_width="310dp"
+        android:layout_height="526dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_cad_cinza" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_cad_cadas"
+        android:layout_width="109dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/btn_inic_c_bot_top"
+        android:text="CADASTRAR"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

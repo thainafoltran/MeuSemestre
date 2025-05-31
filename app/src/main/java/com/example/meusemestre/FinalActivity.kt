@@ -1,20 +1,24 @@
 package com.example.meusemestre
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.meusemestre.databinding.ActivityFinalBinding
+import com.example.meusemestre.databinding.ActivityMainBinding
 
 class FinalActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityFinalBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_final)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        binding = ActivityFinalBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        binding.buttonVoltar.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 }

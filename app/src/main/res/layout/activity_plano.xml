@@ -11,53 +11,65 @@
         android:id="@+id/img_plan_branca"
         android:layout_width="339dp"
         android:layout_height="81dp"
-        app:srcCompat="@drawable/img_plan_b_fundbranco"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="606dp" />
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/img_plan_b_fundbranco" />
 
     <ImageView
         android:id="@+id/img_plan_preta"
         android:layout_width="336dp"
         android:layout_height="469dp"
-        app:srcCompat="@drawable/img_plan_a_fundpreto"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="52dp" />
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="152dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_plan_a_fundpreto" />
 
     <TextView
         android:id="@+id/text_plan_anu_"
-        android:layout_width="238dp"
-        android:layout_height="24dp"
+        android:layout_width="171dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="20dp"
         android:text="PLANO ANUAL"
         android:textColor="#FFD180"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="78dp" />
+        app:layout_constraintStart_toStartOf="@+id/img_plan_preta"
+        app:layout_constraintTop_toTopOf="@+id/img_plan_preta" />
 
     <TextView
         android:id="@+id/text_texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
         android:text="Versão gratuíta permite uma matéria por vez.\n
 Deve digitar os dados cada vez que for usar."
         android:textSize="13sp"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="639dp" />
+        app:layout_constraintStart_toStartOf="@+id/img_plan_branca"
+        app:layout_constraintTop_toBottomOf="@+id/text_grat_tit" />
 
     <TextView
         android:id="@+id/text_grat_tit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="8dp"
         android:text="PLANO GRATUITO"
         android:textSize="16sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="614dp" />
+        app:layout_constraintStart_toStartOf="@+id/img_plan_branca"
+        app:layout_constraintTop_toTopOf="@+id/img_plan_branca" />
 
     <TextView
         android:id="@+id/text_texto_anua"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
         android:text="Guarda seu nome\n\n
 Grava o nome da faculdade\n\n
 Adiciona mais de uma matéria\n\n
@@ -68,7 +80,33 @@ Alerta de dia entrega\n\n
 Alertar de matérias abaixo da mádia\n\n
 Gráfico da evolução do rendimento"
         android:textColor="@color/white"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="132dp" />
+        app:layout_constraintStart_toStartOf="@+id/img_plan_preta"
+        app:layout_constraintTop_toBottomOf="@+id/text_plan_anu_" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_assi"
+        android:layout_width="90dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="392dp"
+        android:background="@drawable/btn_inic_c_bot_top"
+        android:text="Assinar"
+        android:textColor="#FFD180"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/img_plan_preta"
+        app:layout_constraintTop_toTopOf="@+id/img_plan_preta" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_voltar"
+        android:layout_width="83dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/btn_inic_c_bot_top"
+        android:text="Voltar"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_plan_preta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
